@@ -15,9 +15,4 @@ def abrir_ventana_toplevel():
 boton = Button(ventana, text="Abrir Ventana Toplevel", command=abrir_ventana_toplevel)
 boton.pack()
 
-def cerrar_ventana_toplevel(ventana):
-    ventana.destroy()
-
-boton_cerrar = tk.Button(ventana, text="Cerrar Ventana top level", command=lambda )
-
 ventana.mainloop()
