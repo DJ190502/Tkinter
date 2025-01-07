@@ -7,6 +7,9 @@ texto = tk.Text(ventana, width=40, height=10, wrap="word", bg='lightgray', fg="b
 texto.insert("1.0", "¡Bienvenido a nuestro editor de texto!")
 texto.insert("end","\n\nEste es un ejemplo de texto resaltado", "resaltado")
 texto.tag_config("resaltado", background="yellow", foreground="black")
+contenido = texto.get("1.0", "end")
+texto.delete("1.0", "end")
+print(contenido)
 texto.pack()
 
 
