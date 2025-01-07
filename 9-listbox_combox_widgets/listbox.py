@@ -14,12 +14,20 @@ listbox.insert(2,"Elemento 5")
 listbox.delete(2)
 listbox.delete(0)
 
-def on_seleccionar(event):
-    indice = listbox.curselection()
-    elemento =  listbox.get(indice)
-    print(f"Seleccionado: {elemento}")
+#def on_seleccionar(event):
+#    indice = listbox.curselection()
+#    elemento =  listbox.get(indice)
+#    print(f"Seleccionado: {elemento}")
 
-listbox.bind("<<ListboxSelect>>", on_seleccionar)
+def one_click(event):
+    print("Clic en el Listbox")
+
+def double_click(event):
+    print("Doble clic en el Listbox")
+
+#listbox.bind("<<ListboxSelect>>", on_seleccionar)
+listbox.bind("<<Button-1>>", one_click)
+listbox.bind("<<Double-Button-1>>", double_click)
 
 listbox.pack()
 
