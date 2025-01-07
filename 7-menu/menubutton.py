@@ -11,5 +11,9 @@ menubutton.config(menu=menu)
 menu.add_command(label="Abrir")
 menu.add_command(label="Guardar")
 
+def abrir_archivo():
+    print("Archivo Abierto")
+
+menu.add_command(label="Abrir", command=abrir_archivo)
 
 ventana.mainloop()
