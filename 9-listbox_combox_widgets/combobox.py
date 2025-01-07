@@ -21,6 +21,11 @@ def on_seleccionar(event):
     valor_seleccionado = combobox.get()
     print(f"Seleccionado: {valor_seleccionado}")
 
-combobox.bind("<<ComboboxSelected", on_seleccionar)
+combobox.bind("<<ComboboxSelected>>", on_seleccionar)
+
+def on_clic(event):
+    print("Clic en el Combobox")
+
+combobox.bind("<Button-1>", on_clic)
 
 ventana.mainloop()
