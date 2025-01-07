@@ -2,9 +2,13 @@ import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
 
 ventana = tk.Tk()
-texto = tk.Text(ventana)
+texto = tk.Text(ventana, width=40, height=10, wrap="word", bg='lightgray', fg="black", padx='10', pady='10', font=("Helvetica", 12))
 
+texto.insert("1.0", "¡Bienvenido a nuestro editor de texto!")
+texto.insert("end","\n\nEste es un ejemplo de texto resaltado", "resaltado")
+texto.tag_config("resaltado", background="yellow", foreground="black")
 texto.pack()
+
 
 texto_desplazable = ScrolledText(ventana)
 texto_desplazable.pack()
